@@ -13,6 +13,7 @@ public class Main {
             System.out.println("4 - Удалить задачу (по индексу)");
             System.out.println("5 - Просмотреть задачи");
             System.out.println("0 - Выход");
+            System.out.print("---> ");
 
             int choice = scan.nextInt();
             scan.nextLine(); // Очистка буфера
@@ -60,7 +61,7 @@ public class Main {
                     String created = scan.nextLine();
                     System.out.println("Введите дату старта:");
                     String start = scan.nextLine();
-                    System.out.println("Введите интервал (byte):");
+                    System.out.println("Введите интервал (цыфару):");
                     byte interval = scan.nextByte();
                     scan.nextLine();
                     RecurringTask rTask = new RecurringTask();
@@ -94,7 +95,7 @@ public class Main {
                             System.out.println("Старт: " + ((RecurringTask) t).getDataStart());
                             System.out.println("Интервал: " + ((RecurringTask) t).getIsnterval());
                         }
-                        System.out.println("---");
+                        System.out.println("------------------------");
                     }
                 }
                 default -> System.out.println("Неверный выбор");
